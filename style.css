@@ -1,0 +1,225 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* ২. হেডার ইমেজ ডিজাইন (সম্পূর্ণ রেসপনসিভ) */
+.main-header {
+    width: 100%;
+    display: block;
+    line-height: 0; /* ছবির নিচের ডিফল্ট স্পেস সরানোর জন্য */
+}
+
+.header-img {
+    width: 100%;
+    height: auto; /* স্ক্রিন ছোট বড় হলে ছবিও সমানুপাতিকভাবে ছোট বড় হবে */
+    display: block;
+}
+
+/* ৩. নেভিগেশন বার (Running Notice) */
+.navbar {
+    width: 100%;
+    /* ওপরে ও নিচে ১ পিক্সেলের বর্ডার (দুই পাশে বর্ডার নিশ্চিত করতে) */
+    border-top: 1.5px solid #b0b0b0; 
+    border-bottom: 1.5px solid #b0b0b0; 
+    background-color: #e9ecef; /* আপনার রিকোয়ারমেন্ট অনুযায়ী হালকা ধূসর কালার */
+    display: flex;
+    align-items: center;
+    
+    /* ১৪ পিক্সেল উচ্চতা দেওয়ার জন্য ওপরে নিচে ৪ পিক্সেল প্যাডিং দেওয়া হয়েছে */
+    padding: 8px 0; 
+    overflow: hidden;
+}
+
+.navbar marquee {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9222ee; /* নোটিশের টেক্সট প্রফেশনাল লাল কালার */
+}
+
+/* দুটি নোটিশের মাঝখানের ডিভাইডার বা স্পেস */
+.navbar marquee .separator {
+    margin: 0 40px;
+    color: #6c757d;
+}
+
+/* ৪. মেইন সেকশন কন্টেইনার */
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0; /* হেডার থেকে সুন্দর একটি গ্যাপ রাখবে */
+}
+
+.portal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 750px;
+}
+
+/* ৫. প্রতিটি ব্লার সেকশন বক্স */
+.section-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* বাম পাশের টেক্সট */
+.kitab-head {
+    background: transparent;
+}
+
+.kitab-head .kitab-name {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ডান পাশের ড্রপডাউন */
+.kitabdropdown-box {
+    width: 260px;
+}
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.8;
+    overflow: visible;
+}
+
+.dropdown select:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ড্রপডাউন অপশন লিস্ট */
+.dropdown select option {
+    color: #222222;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 2.2;
+    padding: 12px;
+}
+
+.dropdown select option[disabled] {
+    color: #a0aec0;
+    background-color: #edf2f7;
+}
+
+.main-footer {
+    width: 100%;
+    background-color: #1e3a8a; /* ডার্ক রয়্যাল ব্লু ব্যাকগ্রাউন্ড */
+    padding: 40px 0;
+    margin-top: 60px; /* মেইন কন্টেন্ট থেকে পর্যাপ্ত দূরত্ব */
+    border-top: 4px solid #28a745; /* উপরে সুন্দর একটি সবুজ বর্ডার লাইনের টাচ */
+}
+
+/* ডাইনামিক টেবিল কন্টেইনার */
+.footer-table {
+    max-width: 800px; /* টেবিলটি দেখার সুবিধার্থে একটু চওড়া করা হয়েছে */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* রো গুলো উপর-নিচে বসবে */
+    background-color: rgba(255, 255, 255, 0.05); /* হালকা গ্লাস আভা */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* প্রতিটি রো (Row) এর ডিজাইন */
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* হালকা সাদা বর্ডার লাইন */
+    transition: background-color 0.3s ease;
+}
+
+/* মাউস নিলে রো গুলো ডাইনামিকভাবে হাইলাইট হবে */
+.table-row:not(.row-head):hover {
+    background-color: rgba(255, 255, 255, 0.1); /* হোভার ইফেক্ট */
+}
+
+/* ১ম রো: হেডার বা শিরোনাম এর বিশেষ স্টাইল */
+.row-head {
+    /* নিচের রো-গুলোর চেয়ে আরও স্পষ্ট এবং আকর্ষণীয় করতে একটু হালকা রয়্যাল ব্লু আভা */
+    background-color: #2563eb; 
+    
+    /* নিচের দিকে একটি সুন্দর ও উজ্জ্বল বর্ডার লাইন */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4); 
+}
+/* প্রতিটি সেল বা কলামের ভেতরের ডিজাইন (লেখা সাদা ও বোল্ড) */
+.table-cell {
+    flex: 1;
+    padding: 18px 20px; /* পর্যাপ্ত জায়গা ও বড় আকৃতি দেওয়ার জন্য */
+    text-align: center;
+    color: #ffffff; /* লেখার কালার সম্পূর্ণ সাদা */
+    font-weight: bold; /* লেখা বোল্ড করা হয়েছে */
+    font-size: 18px; /* আপনার রিকোয়ারমেন্ট অনুযায়ী ফন্ট সাইজ বাড়ানো হয়েছে */
+    letter-spacing: 0.5px;
+}
+
+/* ১ম কলাম (নাম) একটু বেশি আকর্ষণীয় করার জন্য */
+.name-cell {
+    color: #ffffff;
+}
+
+/* ৩য় কলাম (মোবাইল নম্বর) এর জন্য একটু হাইলাইটেড লুক */
+.phone-cell {
+    color: #e2e8f0; /* সামান্য সফট সাদা কালার নাম্বারের জন্য */
+    font-family: 'Courier New', Courier, monospace; /* নাম্বার স্পষ্ট দেখার ফন্ট */
+}
+
+/* মোবাইল রেসপনসিভ: ছোট স্ক্রিনে টেবিলটি যেন ভেঙে না যায় */
+@media (max-width: 768px) {
+    .footer-table {
+        max-width: 95%;
+    }
+    .table-cell {
+        font-size: 15px; /* ছোট স্ক্রিনে ফন্ট সামান্য মানানসই করা */
+        padding: 12px 10px;
+    }
+}
