@@ -55,6 +55,50 @@ body {
 }
 
 /* ৪. মেইন সেকশন কন্টেইনার */
+.exam-box{
+    width:90%;
+    max-width:600px;
+    margin:50px auto;
+    padding:40px 20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.08);
+    border:2px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.exam-box h2{
+    color:white;
+    font-size:32px;
+    margin-bottom:35px;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.result-btn{
+    display:inline-block;
+    width:80%;
+    padding:22px;
+
+    background:#28a745;
+    color:white;
+
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+
+    border-radius:50px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.result-btn:hover{
+    transform:translateY(-3px);
+}
+
+
 .main {
     width: 100%;
     display: flex;
