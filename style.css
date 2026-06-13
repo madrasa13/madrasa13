@@ -1,11 +1,10 @@
-
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
- 
+
 body {
     background-image: url(photo.jpg);
     background-size: cover;
@@ -14,21 +13,19 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
- 
-/* ২. হেডার ইমেজ ডিজাইন (সম্পূর্ণ রেসপনসিভ) */
+
 .main-header {
     width: 100%;
     display: block;
     line-height: 0;
 }
- 
+
 .header-img {
     width: 100%;
     height: auto;
     display: block;
 }
- 
-/* ৩. নেভিগেশন বার (Running Notice) */
+
 .navbar {
     width: 100%;
     border-top: 1.5px solid #b0b0b0; 
@@ -39,114 +36,117 @@ body {
     padding: 8px 0; 
     overflow: hidden;
 }
- 
+
 .navbar marquee {
     font-size: 18px;
     font-weight: bold;
     color: #9222ee;
 }
- 
+
 .navbar marquee .separator {
     margin: 0 40px;
     color: #6c757d;
 }
- 
-/* ৪. মেইন সেকশন কন্টেইনার */
+
 .exam-box{
     width:90%;
     max-width:600px;
     margin:50px auto;
-    padding:40px 20px;
+    padding:35px 30px 40px 30px;
     text-align:center;
-    font-weight: bold;
-    color: white;
- 
+
     background:rgba(255,255,255,0.08);
     border:2px solid rgba(255,255,255,0.2);
     border-radius:25px;
- 
+
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
- 
-.exam-box h4{
+
+.exam-box h2{
     color:white;
-    font-size:25px;
-    margin-bottom:35px;
+    font-size:28px;
+    margin-bottom: 0;
     text-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
- 
+
+.exam-box p {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
 .result-btn{
     display:inline-block;
-    width:60%;
+    width:80%;
     padding:22px;
- 
+
+    margin-top: 22px;
+
     background:#28a745;
     color:white;
- 
+
     text-decoration:none;
     font-size:24px;
     font-weight:bold;
- 
+
     border-radius:50px;
- 
+
     box-shadow:0 6px 15px rgba(0,0,0,0.25);
     transition:0.3s;
 }
- 
+
 .result-btn:hover{
     transform:translateY(-3px);
 }
- 
-/* ✅ মেনু কন্টেইনার - সবসময় ৩ কলাম */
+
 .menu-container{
     width:90%;
     max-width:700px;
     margin:40px auto;
- 
+
     display:grid;
-    grid-template-columns: repeat(3, 1fr); /* সবসময় ৩ কলাম */
+    grid-template-columns: repeat(3, 1fr);
     gap:15px;
 }
- 
-/* ✅ সব মেনু বাটন একই স্টাইল (প্রথম বাটনের মতো) */
+
 .menu-btn{
-    background: #dce8d7; /* প্রথম বাটনের মতো একই ব্যাকগ্রাউন্ড */
+    background: #dce8d7;
     color: black;
- 
+
     text-decoration: none;
     text-align: center;
- 
+
     padding: 25px 10px;
- 
+
     border: 2px solid #003cff;
     border-radius: 10px;
- 
+
     font-weight: bold;
- 
+
     box-shadow: 0 3px 8px rgba(0,0,0,0.15);
- 
+
     transition: 0.3s;
 }
- 
+
 .menu-btn:hover{
     transform:translateY(-3px);
 }
- 
+
 .main {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 50px 0;
 }
- 
+
 .portal-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 750px;
 }
- 
-/* ৫. প্রতিটি ব্লার সেকশন বক্স */
+
 .section-box {
     width: 100%;
     display: flex;
@@ -161,27 +161,27 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
- 
+
 .kitab-head {
     background: transparent;
 }
- 
+
 .kitab-head .kitab-name {
     color: #ffffff;
     font-size: 26px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
- 
+
 .kitabdropdown-box {
     width: 260px;
 }
- 
+
 .dropdown {
     position: relative;
     width: 100%;
 }
- 
+
 .dropdown select {
     width: 100%;
     padding: 18px 24px;
@@ -202,13 +202,13 @@ body {
     line-height: 1.8;
     overflow: visible;
 }
- 
+
 .dropdown select:hover {
     background-color: #218838;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
- 
+
 .dropdown select option {
     color: #222222;
     background-color: #f8f9fa;
@@ -217,12 +217,12 @@ body {
     line-height: 2.2;
     padding: 12px;
 }
- 
+
 .dropdown select option[disabled] {
     color: #a0aec0;
     background-color: #edf2f7;
 }
- 
+
 .main-footer {
     width: 100%;
     background-color: #1e3a8a;
@@ -230,7 +230,7 @@ body {
     margin-top: 60px;
     border-top: 4px solid #28a745;
 }
- 
+
 .footer-table {
     max-width: 800px;
     margin: 0 auto;
@@ -241,7 +241,7 @@ body {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
- 
+
 .table-row {
     display: flex;
     justify-content: space-between;
@@ -249,16 +249,16 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease;
 }
- 
+
 .table-row:not(.row-head):hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
- 
+
 .row-head {
     background-color: #2563eb; 
     border-bottom: 3px solid rgba(255, 255, 255, 0.4);
 }
- 
+
 .table-cell {
     padding: 18px 15px;
     text-align: center;
@@ -267,80 +267,77 @@ body {
     font-size: 18px;
     white-space: nowrap;
 }
- 
+
 .head-title {
     flex: 1;
     text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
 }
- 
+
 .name-cell {
     flex: 1.8;
     text-align: left;
     padding-left: 25px;
 }
- 
+
 .des-cell {
     flex: 1.2;
     text-align: center;
 }
- 
+
 .phone-cell {
     flex: 1;
     text-align: right;
     padding-right: 25px;
     font-family: 'Courier New', Courier, monospace;
 }
- 
-/* ✅ মোবাইল রেসপনসিভ */
+
 @media (max-width: 768px) {
     .portal-container {
         width: 92%;
         gap: 20px;
     }
- 
+
     .section-box {
         flex-direction: column;
         text-align: center;
         gap: 15px;
         padding: 25px 20px;
     }
- 
+
     .kitab-head .kitab-name {
         font-size: 22px;
     }
- 
+
     .kitabdropdown-box {
         width: 100%;
     }
- 
+
     .footer-table {
         max-width: 95%;
     }
- 
-    /* ✅ মোবাইলেও ৩ কলাম বজায় থাকবে */
+
     .menu-container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px; /* মোবাইলে গ্যাপ একটু কম */
+        gap: 8px;
         width: 95%;
     }
- 
-    /* ✅ মোবাইলে বাটনের ফন্ট ও প্যাডিং একটু ছোট */
+
     .menu-btn {
         padding: 15px 5px;
         font-size: 13px;
         border-radius: 8px;
     }
- 
+
     .exam-box h2{
         font-size:24px;
     }
- 
+
     .result-btn{
         font-size:18px;
     }
- 
+
     .table-row:not(.row-head) {
         flex-direction: column;
         padding: 15px 0;
