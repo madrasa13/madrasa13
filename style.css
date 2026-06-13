@@ -1,10 +1,11 @@
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+ 
 body {
     background-image: url(photo.jpg);
     background-size: cover;
@@ -13,47 +14,43 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
-
+ 
 /* ২. হেডার ইমেজ ডিজাইন (সম্পূর্ণ রেসপনসিভ) */
 .main-header {
     width: 100%;
     display: block;
-    line-height: 0; /* ছবির নিচের ডিফল্ট স্পেস সরানোর জন্য */
+    line-height: 0;
 }
-
+ 
 .header-img {
     width: 100%;
-    height: auto; /* স্ক্রিন ছোট বড় হলে ছবিও সমানুপাতিকভাবে ছোট বড় হবে */
+    height: auto;
     display: block;
 }
-
+ 
 /* ৩. নেভিগেশন বার (Running Notice) */
 .navbar {
     width: 100%;
-    /* ওপরে ও নিচে ১ পিক্সেলের বর্ডার (দুই পাশে বর্ডার নিশ্চিত করতে) */
     border-top: 1.5px solid #b0b0b0; 
     border-bottom: 1.5px solid #b0b0b0; 
-    background-color: #e9ecef; /* আপনার রিকোয়ারমেন্ট অনুযায়ী হালকা ধূসর কালার */
+    background-color: #e9ecef;
     display: flex;
     align-items: center;
-    
-    /* ১৪ পিক্সেল উচ্চতা দেওয়ার জন্য ওপরে নিচে ৪ পিক্সেল প্যাডিং দেওয়া হয়েছে */
     padding: 8px 0; 
     overflow: hidden;
 }
-
+ 
 .navbar marquee {
     font-size: 18px;
     font-weight: bold;
-    color: #9222ee; /* নোটিশের টেক্সট প্রফেশনাল লাল কালার */
+    color: #9222ee;
 }
-
-/* দুটি নোটিশের মাঝখানের ডিভাইডার বা স্পেস */
+ 
 .navbar marquee .separator {
     margin: 0 40px;
     color: #6c757d;
 }
-
+ 
 /* ৪. মেইন সেকশন কন্টেইনার */
 .exam-box{
     width:90%;
@@ -61,107 +58,92 @@ body {
     margin:50px auto;
     padding:40px 20px;
     text-align:center;
-
+ 
     background:rgba(255,255,255,0.08);
     border:2px solid rgba(255,255,255,0.2);
     border-radius:25px;
-
+ 
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
-
+ 
 .exam-box h2{
     color:white;
     font-size:32px;
     margin-bottom:35px;
     text-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
-
+ 
 .result-btn{
     display:inline-block;
     width:80%;
     padding:22px;
-
+ 
     background:#28a745;
     color:white;
-
+ 
     text-decoration:none;
     font-size:24px;
     font-weight:bold;
-
+ 
     border-radius:50px;
-
+ 
     box-shadow:0 6px 15px rgba(0,0,0,0.25);
     transition:0.3s;
 }
-
+ 
 .result-btn:hover{
     transform:translateY(-3px);
 }
-
+ 
+/* ✅ মেনু কন্টেইনার - সবসময় ৩ কলাম */
 .menu-container{
     width:90%;
     max-width:700px;
     margin:40px auto;
-
+ 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr); /* সবসময় ৩ কলাম */
     gap:15px;
 }
-
+ 
+/* ✅ সব মেনু বাটন একই স্টাইল (প্রথম বাটনের মতো) */
 .menu-btn{
-    background:#dce8d7;
-    color:black;
-
-    text-decoration:none;
-    text-align:center;
-
-    padding:25px 10px;
-
-    border:2px solid #003cff;
-    border-radius:10px;
-
-    font-weight:bold;
-
-    box-shadow:0 3px 8px rgba(0,0,0,0.15);
-
-    transition:0.3s;
+    background: #dce8d7; /* প্রথম বাটনের মতো একই ব্যাকগ্রাউন্ড */
+    color: black;
+ 
+    text-decoration: none;
+    text-align: center;
+ 
+    padding: 25px 10px;
+ 
+    border: 2px solid #003cff;
+    border-radius: 10px;
+ 
+    font-weight: bold;
+ 
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+ 
+    transition: 0.3s;
 }
-
+ 
 .menu-btn:hover{
     transform:translateY(-3px);
 }
-
-/* মোবাইল */
-
-@media(max-width:768px){
-
-    .menu-container{
-        grid-template-columns:1fr;
-    }
-
-    .exam-box h2{
-        font-size:24px;
-    }
-
-    .result-btn{
-        font-size:18px;
-    }
-}
-
+ 
 .main {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 50px 0; /* হেডার থেকে সুন্দর একটি গ্যাপ রাখবে */
+    padding: 50px 0;
 }
-
+ 
 .portal-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 750px;
 }
-
+ 
 /* ৫. প্রতিটি ব্লার সেকশন বক্স */
 .section-box {
     width: 100%;
@@ -177,29 +159,27 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-
-/* বাম পাশের টেক্সট */
+ 
 .kitab-head {
     background: transparent;
 }
-
+ 
 .kitab-head .kitab-name {
     color: #ffffff;
     font-size: 26px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
-/* ডান পাশের ড্রপডাউন */
+ 
 .kitabdropdown-box {
     width: 260px;
 }
-
+ 
 .dropdown {
     position: relative;
     width: 100%;
 }
-
+ 
 .dropdown select {
     width: 100%;
     padding: 18px 24px;
@@ -220,14 +200,13 @@ body {
     line-height: 1.8;
     overflow: visible;
 }
-
+ 
 .dropdown select:hover {
     background-color: #218838;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
-
-/* ড্রপডাউন অপশন লিস্ট */
+ 
 .dropdown select option {
     color: #222222;
     background-color: #f8f9fa;
@@ -236,22 +215,22 @@ body {
     line-height: 2.2;
     padding: 12px;
 }
-
+ 
 .dropdown select option[disabled] {
     color: #a0aec0;
     background-color: #edf2f7;
 }
-
+ 
 .main-footer {
     width: 100%;
-    background-color: #1e3a8a; /* ডার্ক রয়্যাল ব্লু */
+    background-color: #1e3a8a;
     padding: 40px 0;
     margin-top: 60px;
-    border-top: 4px solid #28a745; /* উপরে সবুজ বর্ডার */
+    border-top: 4px solid #28a745;
 }
-
+ 
 .footer-table {
-    max-width: 800px; /* কম্পিউটারের জন্য চওড়া সাইজ */
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -260,7 +239,7 @@ body {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .table-row {
     display: flex;
     justify-content: space-between;
@@ -268,87 +247,100 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease;
 }
-
+ 
 .table-row:not(.row-head):hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-
-/* ১ম রো: শিরোনাম উজ্জ্বল করা হলো */
+ 
 .row-head {
     background-color: #2563eb; 
     border-bottom: 3px solid rgba(255, 255, 255, 0.4);
 }
-
-/* সাধারণ সেল ডিজাইন */
+ 
 .table-cell {
     padding: 18px 15px;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
     font-size: 18px;
-    white-space: nowrap; /* টেক্সট যেন কোনোভাবেই নিচে না নামে */
+    white-space: nowrap;
 }
-
-/* 💡 শিরোনাম 'যোগাযোগ' পুরো ঘর জুড়ে মাঝখানে থাকবে */
+ 
 .head-title {
     flex: 1;
     text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
 }
-
-/* 💡 নামের কলামটি বড় করা হলো (১.৮ গুণ) যাতে নাম এক লাইনে ধরে */
+ 
 .name-cell {
     flex: 1.8;
-    text-align: left; /* নামগুলো বাম থেকে শুরু হলে দেখতে সুন্দর লাগবে */
+    text-align: left;
     padding-left: 25px;
 }
-
-/* 💡 পদবির কলামটি যতটুকু দরকার ঠিক ততটুকু থাকবে */
+ 
 .des-cell {
     flex: 1.2;
     text-align: center;
 }
-
-/* 💡 মোবাইল নম্বরের কলামটি ফিক্সড ও সুন্দর করা হলো */
+ 
 .phone-cell {
     flex: 1;
     text-align: right;
     padding-right: 25px;
     font-family: 'Courier New', Courier, monospace;
 }
-
-/* ==========================================================================
-   ৯. মোবাইল ও রেসপনসিভ কাস্টমাইজেশন
-   ========================================================================== */
+ 
+/* ✅ মোবাইল রেসপনসিভ */
 @media (max-width: 768px) {
     .portal-container {
         width: 92%;
         gap: 20px;
     }
-
+ 
     .section-box {
         flex-direction: column;
         text-align: center;
         gap: 15px;
         padding: 25px 20px;
     }
-
+ 
     .kitab-head .kitab-name {
         font-size: 22px;
     }
-
+ 
     .kitabdropdown-box {
         width: 100%;
     }
-
+ 
     .footer-table {
         max-width: 95%;
     }
-
-    /* মোবাইলের ছোট স্ক্রিনে নাম যেন কেটে না যায় সেজন্য ফ্লেক্স এবং স্ক্রলিং সাপোর্ট */
+ 
+    /* ✅ মোবাইলেও ৩ কলাম বজায় থাকবে */
+    .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px; /* মোবাইলে গ্যাপ একটু কম */
+        width: 95%;
+    }
+ 
+    /* ✅ মোবাইলে বাটনের ফন্ট ও প্যাডিং একটু ছোট */
+    .menu-btn {
+        padding: 15px 5px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+ 
+    .exam-box h2{
+        font-size:24px;
+    }
+ 
+    .result-btn{
+        font-size:18px;
+    }
+ 
     .table-row:not(.row-head) {
-        flex-direction: column; /* মোবাইলে নাম, পদবি, নাম্বার উপর-নিচে বসবে */
+        flex-direction: column;
         padding: 15px 0;
         gap: 8px;
     }
